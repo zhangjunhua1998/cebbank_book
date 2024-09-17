@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!--
+        MyBatis核心配置文件中的标签必须要按照指定的顺序配置：
+        properties?,settings?,typeAliases?,typeHandlers?,
+        objectFactory?,objectWrapperFactory?,reflectorFactory?,
+        plugins?,environments?,databaseIdProvider?,mappers?
+    -->
+
+    <settings>
+        <!--将下划线映射为驼峰-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <plugins>
+        <!--配置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!--datasource即数据源，其作用是帮助我们来管理数据库的连接的-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/cebbank_book?serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <package name="com.cebbank.bookstore.mapper"/>
+    </mappers>
+
+    <!--<mappers>
+        <mapper class="com.cebbank.bookstore.mapper.BookMapper"/>
+        &lt;!&ndash; 其他的 Mapper 接口 &ndash;&gt;
+    </mappers>-->
+</configuration>
