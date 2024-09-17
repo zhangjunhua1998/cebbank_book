@@ -8,5 +8,6 @@ public class JavaTest {
         System.out.println("第4行");
         System.out.println("第5行");
         System.out.println("第6行");
+        System.out.println("test第6行");
     }
 }
