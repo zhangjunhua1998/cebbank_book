@@ -2,7 +2,6 @@ package com.cebbank.bookstore.test;
 
 public class JavaTest {
     public static void main(String[] args) {
-        System.out.println("第0行");
         System.out.println("第1行");
         System.out.println("第2行");
         System.out.println("第3行");
@@ -11,6 +10,7 @@ public class JavaTest {
         System.out.println("第6行");
         System.out.println("test第6行");
         System.out.println("test第7行");
+        System.out.println("test第9行");
         System.out.println("第8行");
         System.out.println("第10行");
         System.out.println("第11行");
