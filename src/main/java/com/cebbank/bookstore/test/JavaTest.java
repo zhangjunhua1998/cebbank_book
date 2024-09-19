@@ -8,5 +8,6 @@ public class JavaTest {
         System.out.println(4);
         System.out.println("a");
         System.out.println("b");
+        System.out.println("c");
     }
 }
