@@ -9,14 +9,12 @@ public class JavaTest {
         System.out.println("第4行");
         System.out.println("第5行");
         System.out.println("test第6行");
-        System.out.println("test第7行");
-        System.out.println("test第9行");
         System.out.println("第8行");
-        System.out.println("第10行");
         System.out.println("第11行");
-        System.out.println("第7行");
         System.out.println("第20行");
 
         System.out.println(1);
+
+        System.out.println("数字2");
     }
 }
